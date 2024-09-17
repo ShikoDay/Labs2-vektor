@@ -20,6 +20,37 @@ struct CalcProblemParams
     /* data */
 };
 
+// string InitData(string filePath)
+// {
+//     string line;
+//     ifstream myfile("C:/Users/Win10Pro/Desktop/kurs5/algoritmisation/Labs2-vektor/" + filePath);
+//     if (myfile.is_open())
+//     {
+
+//         while (getline(myfile, line))
+//         {
+//             if (line == "vector" or line == "Vector")
+//             {
+//                 cout << line << endl;
+//                 cout << "vector is search" << "\n";
+//                 continue;
+//             }
+//             else
+//                 cout << "vector is not found" << "\n";
+
+//             // cout << line << endl;
+//         }
+//         myfile.close();
+//     }
+
+//     else
+//         cout << "Unable to open file" << "\n";
+
+//     int Num_of_values = 1;
+//     int Values[Num_of_values];
+//     return Num_of_values, Values;
+// }
+
 int main(int argc, char *argv[])
 {
     setlocale(LC_ALL, "Russian");
@@ -74,6 +105,9 @@ int main(int argc, char *argv[])
         }
     }
 
+    // string fileParam1 = InitData(CalcProblemParamsCreate.filePath1);
+    // string fileParam2 = InitData(CalcProblemParamsCreate.filePath2);
+
     string line;
     ifstream myfile1("C:/Users/Win10Pro/Desktop/kurs5/algoritmisation/Labs2-vektor/" + CalcProblemParamsCreate.filePath1);
     if (myfile1.is_open())
@@ -81,13 +115,24 @@ int main(int argc, char *argv[])
 
         while (getline(myfile1, line))
         {
+            if (line == "vector" or line == "Vector")
+            {
+                // cout << line << endl;
+                cout << "vector is search" << "\n";
+                continue;
+            }
+            // else
+            //     cout << "vector is not found" << "\n";
+
             cout << line << endl;
         }
         myfile1.close();
     }
 
     else
+    {
         cout << "Unable to open file" << "\n";
+    }
 
     ifstream myfile2("C:/Users/Win10Pro/Desktop/kurs5/algoritmisation/Labs2-vektor/" + CalcProblemParamsCreate.filePath2);
     if (myfile2.is_open())
@@ -95,13 +140,24 @@ int main(int argc, char *argv[])
 
         while (getline(myfile2, line))
         {
+            if (line == "vector" or line == "Vector")
+            {
+                // cout << line << endl;
+                cout << "vector is search" << "\n";
+                continue;
+            }
+            // else
+            //     cout << "vector is not found" << "\n";
+
             cout << line << endl;
         }
         myfile2.close();
     }
 
     else
+    {
         cout << "Unable to open file" << "\n";
+    }
 
     return 0;
 };
