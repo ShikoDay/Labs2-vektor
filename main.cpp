@@ -6,8 +6,10 @@
 #include "Calculator.cpp"
 
 // Основная функция
-int main() {
-    try {
+int main()
+{
+    try
+    {
         VectorHandler<int> vec1, vec2, result;
 
         // Ввод векторов
@@ -43,9 +45,10 @@ int main() {
 
         // Экспорт результата в файл
         exporter.ExportToFile(result, "mul_result.txt");
-
-    } catch (const std::exception& e) {
-        std::cerr << "Ошибка: " << e.what() << std::endl;
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << "Ошибка1: " << e.what() << std::endl;
     }
 
     return 0;
