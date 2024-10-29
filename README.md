@@ -23,7 +23,9 @@ C++
    #include <vector>
 
    std::vector<int> vec; // Пустой вектор целых чисел
+   
    std::vector<int> vec2(10); // Вектор из 10 элементов, инициализированных нулями
+   
    std::vector<int> vec3(10, 5); // Вектор из 10 элементов, инициализированных значением 5
    
 
@@ -32,6 +34,7 @@ C++
 C++
 
    vec.push_back(1); // Добавление элемента в конец
+   
    vec.push_back(2);
    
 
@@ -49,6 +52,7 @@ C++
 C++
 
    int first = vec[0]; // Доступ к первому элементу
+   
    int second = vec.at(1); // Доступ с проверкой границ
    
 
@@ -57,6 +61,7 @@ C++
 C++
 
    size_t size = vec.size(); // Количество элементов
+   
    size_t capacity = vec.capacity(); // Вместимость (количество элементов, которые может хранить без перераспределения)
    
 
@@ -66,40 +71,6 @@ C++
 
    vec.clear(); // Удаляет все элементы
    
-
-▎Пример использования
-
-Вот пример простого использования векторов:
-
-C++
-
-#include <iostream>
-#include <vector>
-
-int main() {
-    std::vector<int> numbers;
-
-    // Добавление элементов
-    for (int i = 1; i <= 5; ++i) {
-        numbers.push_back(i);
-    }
-
-    // Вывод элементов
-    for (size_t i = 0; i < numbers.size(); ++i) {
-        std::cout << "Element at index " << i << ": " << numbers[i] << std::endl;
-    }
-
-    // Удаление последнего элемента
-    numbers.pop_back();
-
-    std::cout << "After popping last element:" << std::endl;
-    for (const auto& num : numbers) {
-        std::cout << num << " ";
-    }
-    std::cout << std::endl;
-
-    return 0;
-}
 
 ▎Заключение
 
